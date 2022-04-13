@@ -1,2 +1,2 @@
 import fibo
-print(5)
+print(fibo(5))
