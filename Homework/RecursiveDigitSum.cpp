@@ -6,11 +6,13 @@
 #define VIN for(int &x:v) cin>>x;
 #define FL(A,B,C,D) for (int A=B;A<C;A+=D)
 using namespace std;
+int dSum(int n){
+    if(n==0) return 0;
+    return (n%10)+dSum(n/10);
+}
 void solve(){
-    int a,b;
-    a = 10;
-    b = a;
-    cout<<b;
+    int n; cin>>n;
+    cout<<dSum(n);
 }
 int32_t main(){
     ios_base::sync_with_stdio(false);

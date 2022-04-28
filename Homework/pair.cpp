@@ -7,10 +7,12 @@
 #define FL(A,B,C,D) for (int A=B;A<C;A+=D)
 using namespace std;
 void solve(){
-    int a,b;
-    a = 10;
-    b = a;
-    cout<<b;
+    pair <int,string> arr[3];
+    arr[0] = {4,"Gourab"};
+    arr[1] = {1,"Swapan"};
+    arr[2] = {2,"Basunti"};
+    swap(arr[0],arr[2]);
+    cout<<arr[0].first<<" "<<arr[0].second;
 }
 int32_t main(){
     ios_base::sync_with_stdio(false);
