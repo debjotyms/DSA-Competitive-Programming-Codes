@@ -1,0 +1,9 @@
+x=int(input())
+n=0
+while(x):
+    if(x%2==0):
+        x/=2
+    else:
+        x-=1
+        n+=1
+print(n)
