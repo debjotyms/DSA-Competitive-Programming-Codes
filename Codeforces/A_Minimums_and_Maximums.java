@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class miniMax {
+public class A_Minimums_and_Maximums {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         int t = in.nextInt();

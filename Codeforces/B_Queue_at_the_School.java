@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class SchoolQueue {
+public class B_Queue_at_the_School {
     public static void main(String[] args) {
         int n,t;
         Scanner in = new Scanner(System.in);

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class XenaiAndRingroad {
+public class B_Xenia_and_Ringroad {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         long n = in.nextInt();
