@@ -1,16 +1,11 @@
-#include<bits/stdc++.h>
-#define LL long long
-#define PB push_back
-#define MP make_pair
-#define VI vector <int>
-#define VIN for(int &x:v) cin>>x;
-#define FL(A,B,C,D) for (int A=B;A<C;A+=D)
+#include <bits/stdc++.h>
 using namespace std;
 void solve(){
-    int a,b;
-    a = 10;
-    b = a;
-    cout<<b;
+    int n = 10;
+    double a = 10.0;
+    if(a==n){
+        cout<<"Yes";
+    }
 }
 int32_t main(){
     ios_base::sync_with_stdio(false);
