@@ -21,19 +21,20 @@ typedef unsigned long long ull;
 typedef map    <int,int> mpii;
 typedef pair   <int,int> pii;
 typedef pair   <ll,ll>   pl;
-typedef vector <int>     vi;
-typedef vector <ll>      vl;
+typedef vector <ll>      vi;
 typedef vector <pii>     vpii;
 typedef vector <pl>      vpl;
 typedef vector <vi>      vvi;
-typedef vector <vl>      vvl;
+typedef vector <vi>      vvl;
 const double EPS=1e-9;
 const int N=1e6;
 const int M=1e9+7;
 void solve(){
-    ll i;
-    string s; cin>>s;
-    Fo(i,s.size()-1,0) cout<<s[i];
+    ll n=0,m=0,a=0,b=0,i=0,j=0,k=0,l=0,r=0,c=0,ans=0,temp=0,cnt=0,sum=0;
+    string s,s1,s2,s3;
+    cin>>n;
+    vi v(n,1);
+    
 }
 int32_t main(){
     fast_IO;

@@ -31,9 +31,10 @@ const double EPS=1e-9;
 const int N=1e6;
 const int M=1e9+7;
 void solve(){
-    ll i;
-    string s; cin>>s;
-    Fo(i,s.size()-1,0) cout<<s[i];
+    ll n=0,m=0,a=0,b=0,i=0,j=0,k=0,l=0,r=0,c=0,ans=0,temp=0,cnt=0,sum=0;
+    string s,s1,s2,s3;
+    cin>>s;
+    cout<<s[s.size()-2]<<s[s.size()-1];
 }
 int32_t main(){
     fast_IO;
