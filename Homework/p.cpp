@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-#define Author 🅳🅴🅱🅹🅾🆃🆈🅼🆂
+#define Author debjotyms
 #define vin for(auto &x:v) cin>>x;
 #define fo(i,n) for(i=0;i<n;i++)
 #define Fo(i,k,n) for(i=k;k<n?i<n:i>n;k<n?i+=1:i-=1)
@@ -21,24 +21,29 @@ typedef unsigned long long ull;
 typedef map    <int,int> mpii;
 typedef pair   <int,int> pii;
 typedef pair   <ll,ll>   pl;
-typedef vector <int>     vi;
-typedef vector <ll>      vl;
+typedef vector <ll>      vi;
 typedef vector <pii>     vpii;
 typedef vector <pl>      vpl;
 typedef vector <vi>      vvi;
-typedef vector <vl>      vvl;
+typedef vector <vi>      vvl;
 const double EPS=1e-9;
 const int N=1e6;
 const int M=1e9+7;
 void solve(){
-    ll i;
-    string s; cin>>s;
-    Fo(i,s.size()-1,0) cout<<s[i];
+	ll n=0,m=0,a=0,b=0,i=0,j=0,k=0,l=0,r=0,c=0,ans=0,temp=0,cnt=0,sum=0;
+	string s,s1,s2,s3;
+	vi Arr(5) = {1,2,3,4,5};
+	vector <int> vPrefix(N+1);
+    vPrefix[1] = Arr[0];
+    for(int i=2;i<N;i++){
+        vPrefix[i] = vPrefix[i-1] + Arr[i-1];
+    }
+    for(auto i:vPrefix) cout<<i<<" ";
 }
 int32_t main(){
-    fast_IO;
-    int t=1;
-    //cin>>t;
-    while(t--) solve();
-    return 0;
+	fast_IO;
+	int t=1;
+	//cin>>t;
+	while(t--) solve();
+	return 0;
 }
