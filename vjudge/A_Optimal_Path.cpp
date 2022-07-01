@@ -29,18 +29,19 @@ const double EPS=1e-9;
 const int N=1e6;
 const int M=1e9+7;
 void solve(){
-    ll a=0,b=0,c=0,i=0,j=0,k=0,l=0,n=0,m=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
+    ll n=0,m=0,a=0,b=0,c=0,i=0,j=0,k=0,l=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
     string s,s1,s2,s3;
-    cin>>s;
-    vi v = {1,2,3};
-    for(auto i:v){
-        cout<<typeid(i).name()<<endl;
+    cin>>n>>m;
+    sum = (m*(m+1))/2;
+    Fo(i,2,n+1){
+        sum+=(i-1)*m+m;
     }
+    cout<<sum<<endl;
 }
 int32_t main(){
     fast_IO;
     int t=1;
-    //cin>>t;
+    cin>>t;
     while(t--) solve();
     return 0;
 }

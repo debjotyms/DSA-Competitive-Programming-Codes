@@ -31,10 +31,19 @@ const int M=1e9+7;
 void solve(){
     ll a=0,b=0,c=0,i=0,j=0,k=0,l=0,n=0,m=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
     string s,s1,s2,s3;
-    cin>>s;
-    vi v = {1,2,3};
-    for(auto i:v){
-        cout<<typeid(i).name()<<endl;
+    cin>>n;
+    set <ll> st;
+    fo(i,n){
+        cin>>a>>b;
+        if(a==1){
+            st.insert(b);
+        }else if(a==2){
+            st.erase(b);
+        }else{
+            auto it = st.find(b);
+            if(it!=st.end()) cout<<"Yes\n";
+            else cout<<"No"<<endl;
+        }
     }
 }
 int32_t main(){

@@ -29,18 +29,42 @@ const double EPS=1e-9;
 const int N=1e6;
 const int M=1e9+7;
 void solve(){
-    ll a=0,b=0,c=0,i=0,j=0,k=0,l=0,n=0,m=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
+    ll n=0,m=0,a=0,b=0,c=0,i=0,j=0,k=0,l=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
     string s,s1,s2,s3;
+    cin>>n;
     cin>>s;
-    vi v = {1,2,3};
-    for(auto i:v){
-        cout<<typeid(i).name()<<endl;
+    vector <ll> ansVector;
+    if(s[0]=='9'){
+        vector <char> allNine(n+1,'1');
+        for(auto i:allNine) s1.push_back(i);
+        rev(s1);
+        int carry=0;
+        fo(i,n){
+            int digit = s[i]-'0'+carry;
+            if(digit>1){
+                cout<<(11-digit);
+                carry = 1;
+            }else{
+                cout<<(1-digit);
+                carry=0;
+            }
+        }
+        rev(ansVector);
+        for(auto i:ansVector) cout<<i;
+    }else{
+        vector <char> allNine(n,'9');
+        for(auto i:allNine) s1.push_back(i);
+        fo(i,n){
+            int digit = s[i]-'0';
+            cout<<9-digit;
+        }
     }
+    cout<<endl;
 }
 int32_t main(){
     fast_IO;
     int t=1;
-    //cin>>t;
+    cin>>t;
     while(t--) solve();
     return 0;
 }

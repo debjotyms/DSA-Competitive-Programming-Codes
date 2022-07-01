@@ -1,5 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define Author debjotyms
 #define vin for(auto &x:v) cin>>x;
 #define fo(i,n) for(i=0;i<n;i++)
 #define Fo(i,k,n) for(i=k;k<n?i<n:i>n;k<n?i+=1:i-=1)
@@ -17,25 +18,28 @@ using namespace std;
 #define fast_IO ios_base::sync_with_stdio(0),cin.tie(0),cout.tie(0)
 typedef long long ll;
 typedef unsigned long long ull;
-typedef map <int,int> mpii;
-typedef pair <int,int> pii;
-typedef pair <ll,ll> pl;
-typedef vector <ll> vi;
-typedef vector <pii> vpii;
-typedef vector <pl> vpl;
-typedef vector <vi> vvi;
-typedef vector <vi> vvl;
+typedef map    <int,int> mpii;
+typedef pair   <int,int> pii;
+typedef pair   <ll,ll>   pl;
+typedef vector <ll>      vi;
+typedef vector <pii>     vpii;
+typedef vector <pl>      vpl;
+typedef vector <vi>      vvi;
+typedef vector <vi>      vvl;
 const double EPS=1e-9;
 const int N=1e6;
 const int M=1e9+7;
 void solve(){
-    ll a=0,b=0,c=0,i=0,j=0,k=0,l=0,n=0,m=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
+    ll n=0,m=0,a=0,b=0,c=0,i=0,j=0,k=0,l=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
     string s,s1,s2,s3;
-    cin>>s;
-    vi v = {1,2,3};
-    for(auto i:v){
-        cout<<typeid(i).name()<<endl;
+    cin>>r>>c;
+    int arr[3][3];
+    fo(i,2){
+        fo(j,2){
+            cin>>arr[i+1][j+1];
+        }
     }
+    cout<<arr[r][c];
 }
 int32_t main(){
     fast_IO;

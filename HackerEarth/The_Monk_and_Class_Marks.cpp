@@ -31,11 +31,23 @@ const int M=1e9+7;
 void solve(){
     ll a=0,b=0,c=0,i=0,j=0,k=0,l=0,n=0,m=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
     string s,s1,s2,s3;
-    cin>>s;
-    vi v = {1,2,3};
-    for(auto i:v){
-        cout<<typeid(i).name()<<endl;
+
+    map < int,multiset <string> > mss;
+    cin>>n;
+    while(n--){
+        cin>>s>>temp;
+        mss[temp*-1].insert(s);
     }
+    auto it = --(mss.end());
+    // while(true){
+        for(auto student:(*(it)).second){
+            cout<<student<<" "<<(*(it)).first*-1<<endl;
+        }
+    //     if(it==mss.begin()){
+    //         break;
+    //     }
+    //     --it;
+    // }
 }
 int32_t main(){
     fast_IO;

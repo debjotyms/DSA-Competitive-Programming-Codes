@@ -29,18 +29,33 @@ const double EPS=1e-9;
 const int N=1e6;
 const int M=1e9+7;
 void solve(){
-    ll a=0,b=0,c=0,i=0,j=0,k=0,l=0,n=0,m=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
-    string s,s1,s2,s3;
-    cin>>s;
-    vi v = {1,2,3};
-    for(auto i:v){
-        cout<<typeid(i).name()<<endl;
-    }
+	ll a=0,b=0,c=0,i=0,j=0,k=0,l=0,n=0,m=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
+	string s,s1,s2,s3;
+	cin>>s;
+	map <char,int> brackets = {{'(',-1},{'{',-2},{'[',-3},{')',1},{'}',2},{']',3}};
+	stack <char> stk;
+	for(auto i:s){
+		if(brackets[i]<0){
+			stk.push(i);
+		}else{
+			if(stk.empty()){
+				cout<<"NO"<<endl;
+				return;
+			}else if(brackets[i]+brackets[stk.top()]==0){
+				stk.pop();
+			}else{
+				cout<<"NO"<<endl;
+				return;
+			}
+		}
+	}
+    if(stk.empty()) cout<<"YES\n";
+    else cout<<"NO\n";
 }
 int32_t main(){
-    fast_IO;
-    int t=1;
-    //cin>>t;
-    while(t--) solve();
-    return 0;
+	fast_IO;
+	int t=1;
+	cin>>t;
+	while(t--) solve();
+	return 0;
 }

@@ -31,10 +31,19 @@ const int M=1e9+7;
 void solve(){
     ll a=0,b=0,c=0,i=0,j=0,k=0,l=0,n=0,m=0,p=0,q=0,r=0,ans=0,temp=0,cnt=0,sum=0;
     string s,s1,s2,s3;
-    cin>>s;
-    vi v = {1,2,3};
-    for(auto i:v){
-        cout<<typeid(i).name()<<endl;
+    cin>>n;
+    cin.ignore(); 
+    map <string,string> solan;
+    fo(i,n){
+        getline(cin,s1);
+        getline(cin,s2);
+        solan.insert({s1,s2});
+    }
+    cin>>a;
+    cin.ignore(); 
+    fo(i,a){
+        getline(cin,s);
+        cout<<solan[s]<<endl;
     }
 }
 int32_t main(){
