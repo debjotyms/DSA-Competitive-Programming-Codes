@@ -4,14 +4,14 @@ using namespace std;
 #define endl '\n'
 typedef long long ll;
 void solve(){
-    int n; cin>>n;
-    int ans = n;
-    int i;
-    for(i = 0;;i++){
-        ans = ans&(ans-i);
-        if(ans==0) break;
+    vector <int> v(3); vin v;
+    if(v[0]!=v[1] && v[1]!=v[2] && v[2]!=v[0]) cout<<"NO\n";
+    else{
+        sort(v.begin(),v.end());
+        if(v[0]==v[1] && v[1]==v[2] && v[2]==v[0]) cout<<"YES\n";
+        else if(v[1]==v[2]) cout<<"NO\n";
+        else cout<<"YES\n";
     }
-    cout<<(n-i)<<endl;
 }
 int32_t main(){
     ios_base::sync_with_stdio(0);
