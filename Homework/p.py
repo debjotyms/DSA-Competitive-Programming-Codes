@@ -1,3 +1,5 @@
-import imp
-from art import logo
-print(logo)
+def a():
+    print("Hello")
+    return ("hello")
+
+print(a())
