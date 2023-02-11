@@ -1,0 +1,32 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define vi vector <long long>
+#define all(x) x.begin(),x.end()
+#define vin for(auto &x:v) cin>>x;
+#define vout for(auto x:v) cout<<x<<" ";
+#define endl '\n'
+typedef long long ll;
+long long cs = 1;
+void solve(){
+    ll a; cin>>a;
+    if(a==1) cout<<1<<endl;
+    else if(a%2==1){
+        for(int i=0;i<a;i++) cout<<1<<" ";
+        cout<<endl;
+    }else{
+        cout<<1<<" "<<3<<" "; 
+        for(int i=0;i<a-2;i++){
+            cout<<2<<" ";
+        }
+        cout<<endl;
+    }
+}
+int32_t main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    int t=1;
+    cin>>t;
+    while(t--) solve();
+    return 0;
+}
