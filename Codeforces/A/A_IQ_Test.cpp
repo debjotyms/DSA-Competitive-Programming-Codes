@@ -3,34 +3,24 @@
 #define PB push_back
 #define MP make_pair
 #define VI vector <int>
-#define VIN for(int &x:v) cin>>x;
-#define FL(A,B,C,D) for (int A=B;A<C;A+=D)
+#define FL(A,B,C,D) for(int A=B;A<C;A+=D)
 using namespace std;
 void solve(){
-    string s;
-    for(int i=0;i<9;i++){
-        string a; cin>>a;
-        s+=a;
-    }
-    for(int i=0;i<11;i++){
-        if(i==3 || i==7) continue;
-        string p; 
-        p+=s[i];
-        p+=s[i+1];
-        p+=s[i+4];
-        p+=s[i+5];
-        int h=0;
-        int d=0;
-        for(auto c:p){
-            if(c=='.') d++;
-            else h++;
-        }
-        if(h>=3 || d>=3){
-            cout<<"YES";
-            return;
+    int n; cin>>n;
+    int e=0,o=0,ei,oi;
+    VI v;
+    for(int i=0;i<n;i++){
+        int a; cin>>a;
+        if(a%2==0){
+            e++;
+            ei=i;
+        }else{
+            o++;
+            oi=i;
         }
     }
-    cout<<"NO";
+    if(e==1) cout<<ei+1;
+    else cout<<oi+1;
 }
 int32_t main(){
     ios_base::sync_with_stdio(false);
