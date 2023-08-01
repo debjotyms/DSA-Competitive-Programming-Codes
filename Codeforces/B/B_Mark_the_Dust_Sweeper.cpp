@@ -8,17 +8,17 @@ typedef long long ll;
 long long cs = 1;
 void solve(){
     int n; cin>>n;
-    vi v(n); vin;
     bool chk = true;
     ll sum = 0;
     for(int i=0;i<n-1;i++){
-        if(chk && v[i]==0){
+        ll a; cin>>a;
+        if(chk && a==0){
             continue;
         }else{
             chk = false;
         }
-        if(v[i]==0) sum++;
-        else sum+=v[i]; 
+        if(a==0) sum++;
+        else sum+=a; 
     }
     cout<<sum<<endl;
 }
