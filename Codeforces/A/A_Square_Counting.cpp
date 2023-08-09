@@ -1,21 +1,30 @@
-#include<bits/stdc++.h>
-#define LL long long
-#define PB push_back
-#define VI vector <int>
-#define FL(A,B,C,D) for(int A=B;A<C;A+=D)
+#include <bits/stdc++.h>
 using namespace std;
+#define vi vector <long long>
+#define all(x) x.begin(),x.end()
+#define vin for(auto &x:v) cin>>x;
+#define vout for(auto x:v) cout<<x<<" ";
+#define endl '\n'
+typedef long long ll;
+long long cs = 1;
+
 void solve(){
-    int t; cin>>t;
-    LL n,s;
-    while(t--){
-        cin>>n>>s;
-        cout<<(s/(n*n))<<endl;
+    ll n, s; cin>>n>>s;
+    ll msum = (n-1)*(n+1);
+    ll diff = s-msum;
+    if(diff<=0){
+        cout<<0<<endl;
+        return;
     }
+    cout<<fixed<<setprecision(0)<<ceil(diff/(n*n*1.0))<<endl;
 }
-int32_t main(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-    solve();
+
+int main(){
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
+    int t=1;
+    cin>>t;
+    while(t--) solve();
     return 0;
 }
