@@ -1,28 +1,36 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define vi vector <long long>
+#define all(x) x.begin(),x.end()
 #define vin for(auto &x:v) cin>>x;
+#define vout(v) for(auto x:v) cout<<x<<" ";
 #define endl '\n'
 typedef long long ll;
-ll minOpp(vector<int>&target) {
-    ll ans=target[0];
-    for(int i=1;i<target.size();i++){
-        if(target[i]>target[i-1]) ans+=(target[i]-target[i-1]);
-    }
-    return ans;
+long long cs = 1;
+
+ll times(vector<ll> v){
+    ll res = 0;
+    for(ll i=1;i<v.size();i++) if(v[i]>v[i-1]) res+=(v[i]-v[i-1]);
+    return res+=v[0];
 }
+
 void solve(){
-    vector <int> v,v2;
-    int n; cin>>n;
-    for(int i=0;i<n;i++){
-        int a; cin>>a;
-        v.push_back(a);
-        v2.push_back(a);
+    ll n; cin>>n;
+    vi v(n); vin;
+    vi va = v;
+    if(n<3){
+        cout<<"YES"<<endl;
+        return;
     }
-    sort(v2.begin(),v2.end());
-    if(minOpp(v)<=v2[n-1]) cout<<"YES\n";
-    else cout<<"NO\n";
+    sort(all(va));
+    ll fmin = va[0];
+    ll smin = va[1];
+    ll least = smin+va[va.size()-1]-smin;
+    if(least<times(v)) cout<<"NO"<<endl;
+    else cout<<"YES"<<endl;
 }
-int32_t main(){
+
+int main(){
     ios_base::sync_with_stdio(0);
     cin.tie(0);
     cout.tie(0);
