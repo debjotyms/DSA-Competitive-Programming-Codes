@@ -11,16 +11,18 @@ typedef long long ll;
 long long cs = 1;
 
 void solve(){
-    ll n, x; cin>>n>>x;
-    vi v(n); vin;
-    ll mx = v[0]-0;
-    for(ll i=1;i<n;i++){
-        if(mx<v[i]-v[i-1]) mx = v[i]-v[i-1]; 
+    ll n,x; cin>>n>>x;
+    vi v; v.push_back(0);
+    for(ll i=0;i<n;i++){
+        ll a; cin>>a;
+        v.push_back(a);
     }
-
-    if(mx<((x-v[v.size()-1])*2)) mx = (x-v[v.size()-1])*2;
-
-    cout<<mx<<endl;
+    ll res = 0;
+    for(ll i=0;i<n;i++){
+        res = max(res,v[i+1]-v[i]);
+    }
+    res = max(res,2*(x-v[n]));
+    cout<<res<<endl;
 }
 
 int main(){
