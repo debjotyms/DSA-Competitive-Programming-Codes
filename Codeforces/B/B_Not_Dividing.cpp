@@ -13,17 +13,8 @@ long long cs = 1;
 void solve(){
     ll n; cin>>n;
     vi v(n); vin;
-
-    for(ll i=0;i<n;i++){
-        if(v[i]==1) v[i]+=1;
-    }
-
-    for(ll i=1;i<n;i++){
-        while(v[i]%v[i-1]==0){
-            v[i]+=1;
-        }
-    }
-
+    for(ll i=0;i<n-1;i++) if(v[i]==1) v[i]+=1;
+    for(ll i=1;i<n;i++) if(v[i]%v[i-1]==0) v[i]+=1;
     vout(v); cout<<endl;
 }
 
