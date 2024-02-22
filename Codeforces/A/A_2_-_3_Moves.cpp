@@ -9,7 +9,7 @@ long long cs = 1;
 void solve(){
     ll n; cin>>n;
     if(n==1){
-        cout<<2<<endl;
+        cout<<2<<endl; //
         return;
     }
     cout<<n/3+(n%3?1:0)<<endl;
