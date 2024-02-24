@@ -1,9 +1,11 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define pb push_back
 #define vi vector <long long>
+#define rev(x) reverse(all(x))
 #define all(x) x.begin(),x.end()
 #define vin for(auto &x:v) cin>>x;
-#define vout for(auto x:v) cout<<x<<" ";
+#define vout(v) for(auto x:v) cout<<x<<" ";
 #define endl '\n'
 typedef long long ll;
 long long cs = 1;
@@ -11,18 +13,10 @@ long long cs = 1;
 void solve(){
     ll n; cin>>n;
     vi v(n); vin;
-    ll m = INT_MAX;
-
-    for(ll i=1;i<n;i++){
-        if (v[i]-v[i-1] <0){
-            cout<<"0"<<endl;
-            return;
-        }
-        m = min(m, v[i]-v[i-1]);
-    }
-    m+=1;
-    if(m%2==0) cout<<m/2<<endl;
-    else cout<<m/2+1<<endl;
+    ll mn = 10000000000;
+    for(ll i=0;i<n-1;i++) mn = min(mn,v[i+1]-v[i]);
+    if(mn<0) cout<<0<<endl;
+    else cout<<mn/2+1<<endl;
 }
 
 int main(){
