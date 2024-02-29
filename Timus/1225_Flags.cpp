@@ -10,13 +10,18 @@ using namespace std;
 typedef long long ll;
 long long cs = 1;
 
+ll arr[46];
+
+ll facto(ll n){
+    if(n==1) return 2;
+    if(n==2) return 2;
+    if(arr[n]==0) arr[n]=facto(n-1)+facto(n-2);
+    return arr[n];
+}
+
 void solve(){
-    ll n,i;
-	ll arr[50] = {0};
-	arr[1] = arr[2] = 2;
-	for(i = 3; i <= 45; i ++) arr[i] = arr[i-1] + arr[i-2];
-	cin>>n;
-	cout<<arr[n]<<endl;
+    ll n; cin>>n;
+    cout<<facto(n)<<endl;
 }
 
 int main(){
